@@ -1,0 +1,65 @@
+{
+  "description": "Six synthetic portfolio examples. Numeric budgets and execution values are fixture inputs.",
+  "fixtures": [
+    {
+      "id": "schema",
+      "title": "Shipment reply",
+      "category": "Structure",
+      "rule": "Return exactly two string fields. Field order may vary.",
+      "prompt": "Return the shipment ID and its status in a structured reply.",
+      "expected": "{\"shipment\":\"string\",\"status\":\"string\"}",
+      "baseline": "{\"shipment\":\"S17\",\"status\":\"in_transit\"}",
+      "regression": "{\"status\":\"in_transit\",\"shipment\":\"S17\"}"
+    },
+    {
+      "id": "grounding",
+      "title": "Supported shipment status",
+      "category": "Evidence",
+      "rule": "Match the shipment and status in the latest recorded event.",
+      "prompt": "The latest event for S17 says it is in transit. Has it arrived?",
+      "expected": "{\"shipment\":\"S17\",\"status\":\"in_transit\"}",
+      "baseline": "{\"shipment\":\"S17\",\"status\":\"in_transit\"}",
+      "regression": "{\"shipment\":\"S17\",\"status\":\"delivered\"}"
+    },
+    {
+      "id": "tool",
+      "title": "Read-only lookup",
+      "category": "Tool use",
+      "rule": "The captured trace must contain exactly one read_status call.",
+      "prompt": "Look up the current tracking status for S17.",
+      "expected": "{\"only\":\"read_status\"}",
+      "baseline": "{\"calls\":[\"read_status\"],\"elapsed_ms\":480}",
+      "regression": "{\"calls\":[\"read_status\"],\"elapsed_ms\":520}"
+    },
+    {
+      "id": "latency",
+      "title": "Response time",
+      "category": "Budget",
+      "rule": "Complete the lookup within 2,000 milliseconds.",
+      "prompt": "Return the latest dispatch milestone within the time budget.",
+      "expected": "{\"max_ms\":2000}",
+      "baseline": "{\"elapsed_ms\":1480}",
+      "regression": "{\"elapsed_ms\":2460}"
+    },
+    {
+      "id": "tokens",
+      "title": "Token budget",
+      "category": "Budget",
+      "rule": "Use at most 600 input and output tokens combined.",
+      "prompt": "Summarize the dispatch note in one sentence.",
+      "expected": "{\"max_tokens\":600}",
+      "baseline": "{\"input\":320,\"output\":78}",
+      "regression": "{\"input\":370,\"output\":110}"
+    },
+    {
+      "id": "handoff",
+      "title": "Missing pickup time",
+      "category": "Handoff",
+      "rule": "Route the request to an operator and identify the missing time.",
+      "prompt": "The pickup time is blank. Decide the next booking step.",
+      "expected": "{\"action\":\"review\",\"reason\":\"missing_pickup_time\"}",
+      "baseline": "{\"action\":\"review\",\"reason\":\"missing_pickup_time\"}",
+      "regression": "{\"action\":\"book\",\"reason\":\"assumed_pickup_time\"}"
+    }
+  ]
+}
