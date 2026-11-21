@@ -2,6 +2,9 @@
 
 A Python evaluation harness that turns model responses into repeatable checks and reports regressions in continuous integration.
 
+- [Open the 48-case demo](https://alekwayne.dev/llm-regression-suite/)
+- [View source on GitHub](https://github.com/alek-wayne/llm-regression-suite)
+
 Role — Independent developer
 Period — Independent project
 Focus — Python, Anthropic SDK, React, PostgreSQL, GitHub Actions
