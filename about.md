@@ -26,4 +26,4 @@ Built a sourcing platform for African buyers, synchronized 12 U.S. dealer feeds,
 
 Oklahoma State University · B.S. in Computer Science, expected May 2028.
 
-[Résumé](https://alek-wayne.github.io/resume/alek-wayne.pdf) · [GitHub](https://github.com/alek-wayne) · [LinkedIn](https://www.linkedin.com/in/alek-wayne/) · alekwayne33@gmail.com
+[Résumé](https://alekwayne.dev/resume/alek-wayne.pdf) · [GitHub](https://github.com/alek-wayne) · [LinkedIn](https://www.linkedin.com/in/alek-wayne/) · alekwayne33@gmail.com

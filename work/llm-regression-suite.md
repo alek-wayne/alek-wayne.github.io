@@ -26,4 +26,4 @@ I connected the results to GitHub Actions so a drop in accuracy fails the build 
 
 The portfolio inspector uses six synthetic fixtures to make individual outcomes reproducible. You can inspect the supplied response and the rule behind each verdict. Measuring a model’s current accuracy, latency, or cost would require fresh calls across a representative test set.
 
-[Open the interactive example](https://alek-wayne.github.io/work/llm-regression-suite/#demo)
+[Open the interactive example](https://alekwayne.dev/work/llm-regression-suite/#demo)

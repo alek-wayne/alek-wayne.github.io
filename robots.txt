@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://alek-wayne.github.io/sitemap.xml
+Sitemap: https://alekwayne.dev/sitemap.xml

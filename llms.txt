@@ -4,20 +4,20 @@
 
 ## Profile
 
-- [Background and experience](https://alek-wayne.github.io/about.md)
-- [Résumé PDF](https://alek-wayne.github.io/resume/alek-wayne.pdf)
+- [Background and experience](https://alekwayne.dev/about.md)
+- [Résumé PDF](https://alekwayne.dev/resume/alek-wayne.pdf)
 
 ## Case studies
 
-- [AFX Freight TMS](https://alek-wayne.github.io/work/afx-freight-tms.md) — A freight brokerage platform that turns a shipment request into a quote and gives operators a clear point to review incomplete cargo details.
-- [LLM Regression Suite](https://alek-wayne.github.io/work/llm-regression-suite.md) — A Python evaluation harness that turns model responses into repeatable checks and reports regressions in continuous integration.
-- [Easy Car Imports](https://alek-wayne.github.io/work/easy-car-imports.md) — A vehicle sourcing and ordering platform that brings U.S. dealer inventory, landed-cost estimates, and delivery milestones into one buyer workflow.
+- [AFX Freight TMS](https://alekwayne.dev/work/afx-freight-tms.md) — A freight brokerage platform that turns a shipment request into a quote and gives operators a clear point to review incomplete cargo details.
+- [LLM Regression Suite](https://alekwayne.dev/work/llm-regression-suite.md) — A Python evaluation harness that turns model responses into repeatable checks and reports regressions in continuous integration.
+- [Easy Car Imports](https://alekwayne.dev/work/easy-car-imports.md) — A vehicle sourcing and ordering platform that brings U.S. dealer inventory, landed-cost estimates, and delivery milestones into one buyer workflow.
 
 ## Engineering Notes
 
-- [Three checks before an AI release](https://alek-wayne.github.io/notes/testing-llm-releases.md) — A shipment-status fixture shows how to check an assistant’s reply, the supporting record, and the action it took.
-- [Testing the edges of a landed cost](https://alek-wayne.github.io/notes/landed-cost-boundaries.md) — A confirmed zero-dollar fee and a missing fee lead to different decisions for a buyer. The calculator needs to preserve that difference.
+- [Three checks before an AI release](https://alekwayne.dev/notes/testing-llm-releases.md) — A shipment-status fixture shows how to check an assistant’s reply, the supporting record, and the action it took.
+- [Testing the edges of a landed cost](https://alekwayne.dev/notes/landed-cost-boundaries.md) — A confirmed zero-dollar fee and a missing fee lead to different decisions for a buyer. The calculator needs to preserve that difference.
 
 ## Examples
 
-- [Six synthetic evaluation fixtures](https://alek-wayne.github.io/examples/eval-fixtures.json)
+- [Six synthetic evaluation fixtures](https://alekwayne.dev/examples/eval-fixtures.json)

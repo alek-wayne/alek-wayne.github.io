@@ -26,4 +26,4 @@ I used boundary-value tests to validate preorder totals. One illustrative check 
 
 The customer portal followed a vehicle from acquisition to destination-port delivery. Milestone notifications gave buyers a specific event to follow up on. Between recorded events, the last confirmed milestone was the information the platform could support.
 
-[Open the interactive example](https://alek-wayne.github.io/work/easy-car-imports/#demo)
+[Open the interactive example](https://alekwayne.dev/work/easy-car-imports/#demo)

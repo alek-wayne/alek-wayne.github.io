@@ -1,29 +1,29 @@
 1:"$Sreact.fragment"
-2:"static/chunks/805-e103a52924b874c8.js"
-3:"static/chunks/475-5e77f82a9b2973aa.js"
-4:"static/chunks/app/layout-7473bf52307a0c7a.js"
-5:I[5160,["805","$2","475","$3","177","$4"],"Header"]
-6:I[1148,[],""]
-7:I[7354,[],""]
-8:"static/chunks/698-bfe5f1b085e68937.js"
-9:"static/chunks/app/page-2808fc8a38ce2753.js"
-a:I[7805,["805","$2","698","$8","974","$9"],""]
-b:I[4530,["805","$2","475","$3","177","$4"],"Footer"]
-f:I[3065,[],"OutletBoundary"]
+2:"static/chunks/500-fc3b64d9ff4a32a7.js"
+3:"static/chunks/151-29d01cf79ba6ce66.js"
+4:"static/chunks/app/layout-346f6123bd4c39c8.js"
+5:I[9866,["500","$2","151","$3","177","$4"],"Header"]
+6:I[7121,[],""]
+7:I[4581,[],""]
+8:"static/chunks/175-0ad617407ba99d32.js"
+9:"static/chunks/app/page-46a2ed4f7a4dbea1.js"
+a:I[8500,["500","$2","175","$8","974","$9"],""]
+b:I[5384,["500","$2","151","$3","177","$4"],"Footer"]
+f:I[484,[],"OutletBoundary"]
 10:"$Sreact.suspense"
 12:"ViewportBoundary"
-13:I[3065,[],"$12"]
+13:I[484,[],"$12"]
 15:"MetadataBoundary"
-16:I[3065,[],"$15"]
-18:I[2984,[],"default",1]
+16:I[484,[],"$15"]
+18:I[7123,[],"default",1]
 :HL["/_next/static/css/3e4263a208f27321.css","style"]
 :HL["/fonts/geist-variable.woff2","font",{"crossOrigin":"anonymous","type":"font/woff2"}]
 d:X
 e:[["children",{"s":"__PAGE__","h":512,"d":{"r":["$","$1","c",{"children":[["$","section",null,{"className":"index-hero dark-pane","children":["$","div",null,{"className":"wrap","children":[["$","p",null,{"className":"eyebrow","children":[["$","span",null,{}],"404"]}],["$","h1",null,{"children":["Page not found",["$","span",null,{"className":"blue-dot","children":"."}]]}],["$","p",null,{"children":"This address doesn’t lead to a portfolio page."}],["$","$La",null,{"className":"button primary","href":"/","children":"Back to the portfolio"}]]}]}],null,["$","$Lf",null,{"children":["$","$10",null,{"name":"Next.MetadataOutlet","children":"$@11"}]}]]}],"p":false,"v":null}}]]
 c:[["children",{"s":"_not-found","h":512,"d":{"r":["$","$1","c",{"children":[null,["$","$L6",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L7",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$d"},"c":"$Qe"}]]
-0:{"P":null,"c":["","_not-found",""],"q":"","i":false,"t":{"t":{"s":"","h":528,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/3e4263a208f27321.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(function(){var el=document.documentElement;el.classList.add('js');try{var t=localStorage.getItem('alekwayne-appearance');if(t==='light'||t==='dark'){el.dataset.theme=t}}catch(e){}})();"}}],["$","link",null,{"rel":"preload","href":"/fonts/geist-variable.woff2","as":"font","type":"font/woff2","crossOrigin":"anonymous"}]]}],["$","body",null,{"children":[["$","a",null,{"className":"skip","href":"#main-content","children":"Skip to content"}],["$","$L5",null,{}],["$","main",null,{"id":"main-content","tabIndex":-1,"children":["$","$L6",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L7",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","section",null,{"className":"index-hero dark-pane","children":["$","div",null,{"className":"wrap","children":[["$","p",null,{"className":"eyebrow","children":[["$","span",null,{}],"404"]}],["$","h1",null,{"children":["Page not found",["$","span",null,{"className":"blue-dot","children":"."}]]}],["$","p",null,{"children":"This address doesn’t lead to a portfolio page."}],["$","$La",null,{"className":"button primary","href":"/","children":"Back to the portfolio"}]]}]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","$Lb",null,{}]]}]]}]]}],"p":false,"v":null},"c":"$Qc"},"h":{"r":["$","$1","h",{"children":[["$","meta",null,{"name":"robots","content":"noindex"}],["$","$L13",null,{"children":"$L14"}],["$","$L16",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$10",null,{"name":"Next.Metadata","children":"$L17"}]}],null]}],null]}],"p":false,"v":null}},"m":"$undefined","G":["$18",[]],"S":true,"r":"$undefined","s":"$undefined","a":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"cE8IK3k9jD4S7-_AJI49b"}
+0:{"P":null,"c":["","_not-found",""],"q":"","i":false,"t":{"t":{"s":"","h":528,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/3e4263a208f27321.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(function(){var el=document.documentElement;el.classList.add('js');try{var t=localStorage.getItem('alekwayne-appearance');if(t==='light'||t==='dark'){el.dataset.theme=t}}catch(e){}})();"}}],["$","link",null,{"rel":"preload","href":"/fonts/geist-variable.woff2","as":"font","type":"font/woff2","crossOrigin":"anonymous"}]]}],["$","body",null,{"children":[["$","a",null,{"className":"skip","href":"#main-content","children":"Skip to content"}],["$","$L5",null,{}],["$","main",null,{"id":"main-content","tabIndex":-1,"children":["$","$L6",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L7",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","section",null,{"className":"index-hero dark-pane","children":["$","div",null,{"className":"wrap","children":[["$","p",null,{"className":"eyebrow","children":[["$","span",null,{}],"404"]}],["$","h1",null,{"children":["Page not found",["$","span",null,{"className":"blue-dot","children":"."}]]}],["$","p",null,{"children":"This address doesn’t lead to a portfolio page."}],["$","$La",null,{"className":"button primary","href":"/","children":"Back to the portfolio"}]]}]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","$Lb",null,{}]]}]]}]]}],"p":false,"v":null},"c":"$Qc"},"h":{"r":["$","$1","h",{"children":[["$","meta",null,{"name":"robots","content":"noindex"}],["$","$L13",null,{"children":"$L14"}],["$","$L16",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$10",null,{"name":"Next.Metadata","children":"$L17"}]}],null]}],null]}],"p":false,"v":null}},"m":"$undefined","G":["$18",[]],"S":true,"r":"$undefined","s":"$undefined","a":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"lMskOrIMs5xjnvnv-CcE2"}
 d:C
 14:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","2",{"name":"theme-color","content":"#0b0e14"}]]
-19:I[6332,[],"IconMark"]
+19:I[6869,[],"IconMark"]
 11:null
-17:[["$","title","0",{"children":"Page not found · Alek Wayne"}],["$","link","1",{"rel":"author","href":"https://alek-wayne.github.io"}],["$","meta","2",{"name":"author","content":"Alek Wayne"}],["$","meta","3",{"name":"robots","content":"noindex, follow"}],["$","link","4",{"rel":"icon","href":"/favicon.png","type":"image/png","sizes":"128x128"}],["$","$L19","5",{}]]
+17:[["$","title","0",{"children":"Page not found · Alek Wayne"}],["$","link","1",{"rel":"author","href":"https://alekwayne.dev"}],["$","meta","2",{"name":"author","content":"Alek Wayne"}],["$","meta","3",{"name":"robots","content":"noindex, follow"}],["$","link","4",{"rel":"icon","href":"/favicon.png","type":"image/png","sizes":"128x128"}],["$","$L19","5",{}]]

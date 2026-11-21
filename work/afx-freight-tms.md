@@ -26,4 +26,4 @@ I replayed a fictional Tulsa-to-Dallas dry van request for 12 pallets of machine
 
 Application code calculates recent activity before asking the model to summarize it. In an offline replay, the sample day had eight quote requests against a seven-day average of four. A valid simulated response produced a briefing. An empty response raised a warning and produced no briefing. Judging the quality of the writing would require real model outputs.
 
-[Open the interactive example](https://alek-wayne.github.io/work/afx-freight-tms/#demo)
+[Open the interactive example](https://alekwayne.dev/work/afx-freight-tms/#demo)
