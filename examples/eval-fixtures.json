@@ -3,9 +3,9 @@
   "fixtures": [
     {
       "id": "schema",
-      "title": "Shipment Reply",
+      "title": "Reply Contract",
       "category": "Structure",
-      "rule": "Return exactly two string fields. Field order may vary.",
+      "rule": "Return exactly two string fields in either order.",
       "prompt": "Return the shipment ID and its status in a structured reply.",
       "expected": "{\"shipment\":\"string\",\"status\":\"string\"}",
       "baseline": "{\"shipment\":\"S17\",\"status\":\"in_transit\"}",
@@ -33,7 +33,7 @@
     },
     {
       "id": "latency",
-      "title": "Response Time",
+      "title": "Latency Limit",
       "category": "Budget",
       "rule": "Complete the lookup within 2,000 milliseconds.",
       "prompt": "Return the latest dispatch milestone within the time budget.",

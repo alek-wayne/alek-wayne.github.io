@@ -10,12 +10,12 @@
 ## Case Studies
 
 - [AFX Freight TMS](https://alekwayne.dev/work/afx-freight-tms.md) — A freight brokerage platform that turns a shipment request into a quote and gives operators a clear point to review incomplete cargo details.
-- [LLM Regression Suite](https://alekwayne.dev/work/llm-regression-suite.md) — A Python evaluation harness that turns model responses into repeatable checks and reports regressions in continuous integration.
+- [LLM Regression Suite](https://alekwayne.dev/work/llm-regression-suite.md) — A Python harness that grades 48 synthetic policy cases, gates pull requests in GitHub Actions, and publishes replayable comparisons.
 - [Easy Car Imports](https://alekwayne.dev/work/easy-car-imports.md) — A vehicle sourcing and ordering platform that brings U.S. dealer inventory, landed-cost estimates, and delivery milestones into one buyer workflow.
 
 ## Engineering Notes
 
-- [Three Checks Before an AI Release](https://alekwayne.dev/notes/testing-llm-releases.md) — A shipment-status fixture shows how to check an assistant’s reply, the supporting record, and the action it took.
+- [Three Checks Before an AI Release](https://alekwayne.dev/notes/testing-llm-releases.md) — A shipment-status fixture verifies the assistant’s reply, its supporting record, and the recorded tool action.
 - [Testing the Edges of a Landed Cost](https://alekwayne.dev/notes/landed-cost-boundaries.md) — A confirmed zero-dollar fee and a missing fee lead to different decisions for a buyer. The calculator needs to preserve that difference.
 
 ## Examples

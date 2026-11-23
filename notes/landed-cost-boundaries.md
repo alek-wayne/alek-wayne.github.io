@@ -4,15 +4,15 @@ A confirmed zero-dollar fee and a missing fee lead to different decisions for a 
 
 ## Make Each Amount Visible
 
-A vehicle’s dealer price covers the purchase. A buyer comparing cars across borders also needs inland transport, ocean freight, and import fees. In this illustrative order, a $12,000 car needs $450 of inland transport and $850 of ocean freight. With a confirmed zero import fee, the estimate comes to $13,300.
+A vehicle’s dealer price covers the purchase. A buyer comparing cars across borders also needs inland transport, ocean freight, and import fees. A $12,000 car with $450 in inland transport and $850 in ocean freight comes to $13,300 when the import fee is confirmed at zero.
 
 If the fee field is blank, the buyer still needs that figure to compare the final price. Automatically filling a blank with zero would make an incomplete quote look ready to accept. The input and the calculation therefore need a way to carry an unknown value all the way to the screen.
 
 ## Exercise the Boundary in Cents
 
-The example accepts USD amounts in whole cents after the form has parsed them. Adding integer cents gives an exact result. The form can format the total in dollars at the end. A negative amount or a fractional cent raises a validation error. A missing amount leaves the estimate incomplete.
+After parsing form inputs into whole USD cents, the calculator sums integers and formats the total in dollars for display. Negative amounts and fractional cents raise a validation error, while a missing amount leaves the estimate incomplete.
 
-The two assertions change just the last input. For a third test, enter a fee of one cent and expect the total to increase by exactly one cent. A useful companion test supplies a blank fee and a negative freight charge together. The invalid charge should still reach the operator as an error.
+The two assertions change only the fee. Add a one-cent fee and assert that the total rises by exactly one cent. Then combine a blank fee with a negative freight charge and assert a validation error.
 
 ```python
 def landed_cents(dealer, inland, ocean, fees):
@@ -31,6 +31,6 @@ assert landed_cents(*car, None) is None
 
 ## Keep Price Changes Separate from Order Progress
 
-An estimated fee can change after a car is purchased. That change belongs to a revised estimate with its own inputs and calculation time. A shipment advances when a transport event occurs, such as departure from the origin port. Each update needs an identifiable source.
+A fee revision after purchase belongs to a new estimate with its own inputs and calculation time. A shipment advances when a transport event occurs, such as departure from the origin port. Each update needs an identifiable source.
 
-I would test those paths together. Save a revised fee for a purchased car and check that its current milestone still reads “purchased.” Then deliver the same departure event twice and check for one milestone and one customer notification. The buyer can look up the estimate they accepted at purchase and the latest confirmed shipment event independently.
+Save a revised fee for a purchased car and assert that its milestone still reads “purchased.” Deliver the same departure event twice to test idempotency and expect one milestone and one notification. The buyer looks up the estimate accepted at purchase and the latest confirmed shipment event independently.

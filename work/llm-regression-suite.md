@@ -1,6 +1,6 @@
-# LLM Regression & Guardrail Testing Suite
+# LLM Regression Suite
 
-A Python evaluation harness that turns model responses into repeatable checks and reports regressions in continuous integration.
+A Python harness that grades 48 synthetic policy cases, gates pull requests in GitHub Actions, and publishes replayable comparisons.
 
 - [Open the 48-Case Demo](https://alekwayne.dev/llm-regression-suite/)
 - [View Source on GitHub](https://github.com/alek-wayne/llm-regression-suite)
@@ -11,22 +11,28 @@ Focus — Python, Anthropic SDK, React, PostgreSQL, GitHub Actions
 
 ## What Counts as a Regression
 
-A response can read well and still omit a required field, make an unsupported claim, or cost too much for the task. Each failure needs a specific expectation that a developer can inspect after a run.
+In CMP-02, the seeded candidate returns the correct mount code, cites the wrong product policy, and promises unsupported compatibility. JSON, decision, and value pass. Attribution and wording fail, and the runtime guard withholds the reply.
 
-## The Evaluation Harness
+## Grading and Runtime Guard
 
-I built the harness in Python with the Anthropic SDK. Its 30+ structured test cases cover JSON schema compliance, hallucination guardrails, latency, and token cost. Each case gives the runner a concrete expectation for the response it receives.
+The Python grader checks the JSON contract, decision and value, exact supporting passage IDs, and approved wording. Both fixture runs and the optional Anthropic SDK path use this grader and the same runtime guard.
 
-## Choosing What to Assert
+## Binding Wording to Policy Revisions
 
-Field names and value types give a schema check a precise answer. A factual check needs a source fact for comparison. Applying exact sentence matching to every response would reject valid paraphrases, so the useful comparison depends on the contract the application actually needs.
+The runtime guard requires wording approved for the exact revision of a cited passage. Each approval binds wording to the passage ID, SHA-256 of the policy text, and response decision. Exact matching flags unauthorized promises and also rejects harmless paraphrases.
 
-## Catching a Change Before Release
+## Pinning the Baseline
 
-I connected the results to GitHub Actions so a drop in accuracy fails the build and publishes a pass/fail report. The failed case gives the developer a place to start investigating which input or expectation changed.
+On pull requests, GitHub Actions loads the baseline from the target revision. Request hashes bind each frozen reply to the model ID, prompt, ordered policy passages, and response schema. A change to those inputs makes the old evidence stale.
 
-## Reading the Six Example Cases
+## Enforcing the Release Gate
 
-The portfolio inspector uses six synthetic fixtures to make individual outcomes reproducible. You can inspect the supplied response and the rule behind each verdict. Measuring a model’s current accuracy, latency, or cost would require fresh calls across a representative test set.
+The fixture gate fails on any drop in suite accuracy, candidate accuracy below 90%, candidate p95 latency over 5 seconds, or modeled cost over $0.01 on a candidate trial. Missing or stale evidence makes the run inconclusive. Exit codes 1 (failure) and 2 (inconclusive) both fail the required check.
+
+## Reading the Release Evidence
+
+CI replays the JSON comparison and verifies the Markdown report before uploading both. On the same 48 cases across 12 policy families, the repaired candidate passes 48/48 and the seeded candidate fails the gate at 40/48. Both runs use synthetic replies, timing, and token counts. Live accuracy, latency, and cost require separate measurement.
+
+[Read the Release Reports](https://github.com/alek-wayne/llm-regression-suite/releases/tag/v1.0.1)
 
 [Open the Interactive Example](https://alekwayne.dev/work/llm-regression-suite/#demo)
