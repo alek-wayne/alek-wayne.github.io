@@ -3,7 +3,7 @@
   "fixtures": [
     {
       "id": "schema",
-      "title": "Shipment reply",
+      "title": "Shipment Reply",
       "category": "Structure",
       "rule": "Return exactly two string fields. Field order may vary.",
       "prompt": "Return the shipment ID and its status in a structured reply.",
@@ -13,7 +13,7 @@
     },
     {
       "id": "grounding",
-      "title": "Supported shipment status",
+      "title": "Supported Shipment Status",
       "category": "Evidence",
       "rule": "Match the shipment and status in the latest recorded event.",
       "prompt": "The latest event for S17 says it is in transit. Has it arrived?",
@@ -23,7 +23,7 @@
     },
     {
       "id": "tool",
-      "title": "Read-only lookup",
+      "title": "Read-Only Lookup",
       "category": "Tool use",
       "rule": "The captured trace must contain exactly one read_status call.",
       "prompt": "Look up the current tracking status for S17.",
@@ -33,7 +33,7 @@
     },
     {
       "id": "latency",
-      "title": "Response time",
+      "title": "Response Time",
       "category": "Budget",
       "rule": "Complete the lookup within 2,000 milliseconds.",
       "prompt": "Return the latest dispatch milestone within the time budget.",
@@ -43,7 +43,7 @@
     },
     {
       "id": "tokens",
-      "title": "Token budget",
+      "title": "Token Budget",
       "category": "Budget",
       "rule": "Use at most 600 input and output tokens combined.",
       "prompt": "Summarize the dispatch note in one sentence.",
@@ -53,7 +53,7 @@
     },
     {
       "id": "handoff",
-      "title": "Missing pickup time",
+      "title": "Missing Pickup Time",
       "category": "Handoff",
       "rule": "Route the request to an operator and identify the missing time.",
       "prompt": "The pickup time is blank. Decide the next booking step.",

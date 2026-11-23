@@ -1,13 +1,13 @@
 # Alek Wayne
 
-> Full-stack engineer designing production web platforms, REST APIs, and AI workflows—from relational schema to CI/CD.
+> Full-stack engineer designing production web platforms, REST APIs, and AI workflows — from relational schema to CI/CD.
 
 ## Profile
 
-- [Background and experience](https://alekwayne.dev/about.md)
+- [Background and Experience](https://alekwayne.dev/about.md)
 - [Résumé PDF](https://alekwayne.dev/resume/alek-wayne.pdf)
 
-## Case studies
+## Case Studies
 
 - [AFX Freight TMS](https://alekwayne.dev/work/afx-freight-tms.md) — A freight brokerage platform that turns a shipment request into a quote and gives operators a clear point to review incomplete cargo details.
 - [LLM Regression Suite](https://alekwayne.dev/work/llm-regression-suite.md) — A Python evaluation harness that turns model responses into repeatable checks and reports regressions in continuous integration.
@@ -15,9 +15,9 @@
 
 ## Engineering Notes
 
-- [Three checks before an AI release](https://alekwayne.dev/notes/testing-llm-releases.md) — A shipment-status fixture shows how to check an assistant’s reply, the supporting record, and the action it took.
-- [Testing the edges of a landed cost](https://alekwayne.dev/notes/landed-cost-boundaries.md) — A confirmed zero-dollar fee and a missing fee lead to different decisions for a buyer. The calculator needs to preserve that difference.
+- [Three Checks Before an AI Release](https://alekwayne.dev/notes/testing-llm-releases.md) — A shipment-status fixture shows how to check an assistant’s reply, the supporting record, and the action it took.
+- [Testing the Edges of a Landed Cost](https://alekwayne.dev/notes/landed-cost-boundaries.md) — A confirmed zero-dollar fee and a missing fee lead to different decisions for a buyer. The calculator needs to preserve that difference.
 
 ## Examples
 
-- [Six synthetic evaluation fixtures](https://alekwayne.dev/examples/eval-fixtures.json)
+- [Six Synthetic Evaluation Fixtures](https://alekwayne.dev/examples/eval-fixtures.json)

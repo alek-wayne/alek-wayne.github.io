@@ -1,14 +1,14 @@
-# Testing the edges of a landed cost
+# Testing the Edges of a Landed Cost
 
 A confirmed zero-dollar fee and a missing fee lead to different decisions for a buyer. The calculator needs to preserve that difference.
 
-## Make each amount visible
+## Make Each Amount Visible
 
 A vehicle’s dealer price covers the purchase. A buyer comparing cars across borders also needs inland transport, ocean freight, and import fees. In this illustrative order, a $12,000 car needs $450 of inland transport and $850 of ocean freight. With a confirmed zero import fee, the estimate comes to $13,300.
 
 If the fee field is blank, the buyer still needs that figure to compare the final price. Automatically filling a blank with zero would make an incomplete quote look ready to accept. The input and the calculation therefore need a way to carry an unknown value all the way to the screen.
 
-## Exercise the boundary in cents
+## Exercise the Boundary in Cents
 
 The example accepts USD amounts in whole cents after the form has parsed them. Adding integer cents gives an exact result. The form can format the total in dollars at the end. A negative amount or a fractional cent raises a validation error. A missing amount leaves the estimate incomplete.
 
@@ -29,7 +29,7 @@ assert landed_cents(*car, 0) == 1_330_000
 assert landed_cents(*car, None) is None
 ```
 
-## Keep price changes separate from order progress
+## Keep Price Changes Separate from Order Progress
 
 An estimated fee can change after a car is purchased. That change belongs to a revised estimate with its own inputs and calculation time. A shipment advances when a transport event occurs, such as departure from the origin port. Each update needs an identifiable source.
 

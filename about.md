@@ -1,8 +1,8 @@
 # Alek Wayne
 
-Full-stack engineer designing production web platforms, REST APIs, and AI workflows—from relational schema to CI/CD.
+Full-stack engineer designing production web platforms, REST APIs, and AI workflows — from relational schema to CI/CD.
 
-Los Angeles / Orange County, CA. Open to part-time, contract, and flexible software engineering, AI testing, and IT support roles.
+Los Angeles / Orange County, CA. Open to full-time, contract, and part-time software engineering, AI testing, and IT support roles.
 
 ## Melton Truck Lines
 
