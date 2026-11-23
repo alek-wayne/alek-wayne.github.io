@@ -1,29 +1,31 @@
 # Easy Car Imports
 
-A vehicle sourcing and ordering platform that brings U.S. dealer inventory, landed-cost estimates, and delivery milestones into one buyer workflow.
+A WordPress platform that combined 12 U.S. dealer inventory feeds with landed-cost estimates, online orders, and shipment tracking for buyers in Africa.
 
-Role — Full-Stack Web Developer & Platform Creator
+Role — Founder & Full-Stack Developer
 Period — Sep 2021 – Jul 2023
-Focus — Inventory synchronization, Pricing calculations, Boundary testing, Order tracking
+Focus — 12 U.S. dealer feeds, 4 cost components, Shipment milestones
 
-## The Buyer’s Question
+## Seeing the Delivered Price
 
-For buyers in Africa comparing U.S. dealer listings, the advertised price covered only the vehicle. The decision to place an order depended on the cost of getting that vehicle to the destination port.
+The dealer’s asking price covered the vehicle. Getting it to the destination port added transport and import fees. I showed the dealer price and the landed-cost estimate on each listing so buyers had both figures before ordering.
 
-## From Listings to Orders
+## Synchronizing Dealer Inventory
 
-I built the sourcing and ordering platform and wrote synchronization scripts for 12 U.S. dealer inventory feeds. My work followed the order beyond the listing page, through the price estimate, customer tracking, and milestone notifications.
+I launched the business in Lagos and wrote scripts that synchronized 12 U.S. dealer inventory feeds into one WordPress catalog. The listings updated as dealer stock changed, and buyers placed orders through the same site.
 
-## Keeping Four Costs Visible
+## Calculating Landed Cost in Cents
 
-The calculator combines the dealer price, inland transport, ocean freight, and import fees. Keeping those inputs separate made a revised freight estimate traceable. I could change one charge and check exactly how it moved the preorder total.
+The portfolio calculator parses dealer price, inland transport, ocean freight, and import fees into whole USD cents. It sums integers to avoid floating-point drift, capping each input at one quarter of JavaScript’s maximum safe integer. The UI formats the total in dollars.
 
-## Testing the Boundary
+## Validating Missing and Invalid Inputs
 
-I used boundary-value tests to validate preorder totals. One illustrative check holds three inputs constant and sets inland transport to zero. The total should fall by exactly that charge. An unknown transport charge needs a separate case because silently treating it as zero would understate the estimate.
+With the other costs filled, a confirmed $0 import fee yields a total. A blank fee leaves the estimate incomplete. A negative charge or fractional cent raises a validation error even when another field is blank, so a missing fee never hides an invalid charge.
 
-## After the Order
+## Separating Quotes from Shipment Progress
 
-The customer portal followed a vehicle from acquisition to destination-port delivery. Milestone notifications gave buyers a specific event to follow up on. Between recorded events, the last confirmed milestone was the information the platform could support.
+The portal tracked vehicles from acquisition to port delivery and notified buyers at recorded milestones. A fee revision belongs in a new estimate with its own timestamp, preserving the accepted quote. The companion note specifies an integration test for fee revisions and duplicate departure events.
+
+[Read Edge Cases in Landed-Cost Pricing](https://alekwayne.dev/notes/landed-cost-boundaries/)
 
 [Open the Interactive Example](https://alekwayne.dev/work/easy-car-imports/#demo)

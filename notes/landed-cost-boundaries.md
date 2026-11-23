@@ -1,18 +1,18 @@
-# Testing the Edges of a Landed Cost
+# Edge Cases in Landed-Cost Pricing
 
-A confirmed zero-dollar fee and a missing fee lead to different decisions for a buyer. The calculator needs to preserve that difference.
+A confirmed $0 import fee completes the estimate when other costs are known. A missing fee keeps it incomplete from input to display.
 
-## Make Each Amount Visible
+## Surface Every Cost Input
 
-A vehicle’s dealer price covers the purchase. A buyer comparing cars across borders also needs inland transport, ocean freight, and import fees. A $12,000 car with $450 in inland transport and $850 in ocean freight comes to $13,300 when the import fee is confirmed at zero.
+A dealer’s asking price covers the vehicle. Landed cost also includes inland transport, ocean freight, and import fees. With a $12,000 vehicle, $450 in inland transport, and $850 in ocean freight, a confirmed $0 import fee produces a $13,300 estimate.
 
-If the fee field is blank, the buyer still needs that figure to compare the final price. Automatically filling a blank with zero would make an incomplete quote look ready to accept. The input and the calculation therefore need a way to carry an unknown value all the way to the screen.
+Coercing a blank fee to zero makes an incomplete estimate look ready to accept. The form keeps a blank fee unknown and leaves the estimate incomplete. The Python function below represents the same unknown input as None.
 
-## Exercise the Boundary in Cents
+## Test Boundaries in Whole Cents
 
-After parsing form inputs into whole USD cents, the calculator sums integers and formats the total in dollars for display. Negative amounts and fractional cents raise a validation error, while a missing amount leaves the estimate incomplete.
+The calculator parses USD inputs into whole cents and sums integers to avoid floating-point drift. The display formats the final total in dollars. The Python function rejects negative values and fractional cents before it returns None for missing inputs.
 
-The two assertions change only the fee. Add a one-cent fee and assert that the total rises by exactly one cent. Then combine a blank fee with a negative freight charge and assert a validation error.
+Both assertions vary only the import fee. Add one cent and assert that the total rises by exactly one cent. Pair a blank fee with a negative freight charge and assert a validation error, which takes precedence over an incomplete result.
 
 ```python
 def landed_cents(dealer, inland, ocean, fees):
@@ -29,8 +29,8 @@ assert landed_cents(*car, 0) == 1_330_000
 assert landed_cents(*car, None) is None
 ```
 
-## Keep Price Changes Separate from Order Progress
+## Decouple Quote Revisions from Shipment Progress
 
-A fee revision after purchase belongs to a new estimate with its own inputs and calculation time. A shipment advances when a transport event occurs, such as departure from the origin port. Each update needs an identifiable source.
+Preserve the quote accepted at purchase. Record each later fee revision as a new estimate with its own inputs and timestamp. Update shipment progress on confirmed transport events and keep the source of each event.
 
-Save a revised fee for a purchased car and assert that its milestone still reads “purchased.” Deliver the same departure event twice to test idempotency and expect one milestone and one notification. The buyer looks up the estimate accepted at purchase and the latest confirmed shipment event independently.
+Verify both rules in one integration test. Save a revised fee and assert that the milestone stays “purchased.” Deliver the same port-departure event twice to test idempotency, expecting one milestone update and one buyer notification. Verify that the accepted quote and latest confirmed shipment milestone remain independently accessible.

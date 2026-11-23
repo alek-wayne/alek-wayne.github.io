@@ -11,12 +11,12 @@
 
 - [AFX Freight TMS](https://alekwayne.dev/work/afx-freight-tms.md) — A freight brokerage platform that turns a shipment request into a quote and gives operators a clear point to review incomplete cargo details.
 - [LLM Regression Suite](https://alekwayne.dev/work/llm-regression-suite.md) — A Python harness that grades 48 synthetic policy cases, gates pull requests in GitHub Actions, and publishes replayable comparisons.
-- [Easy Car Imports](https://alekwayne.dev/work/easy-car-imports.md) — A vehicle sourcing and ordering platform that brings U.S. dealer inventory, landed-cost estimates, and delivery milestones into one buyer workflow.
+- [Easy Car Imports](https://alekwayne.dev/work/easy-car-imports.md) — A WordPress platform that combined 12 U.S. dealer inventory feeds with landed-cost estimates, online orders, and shipment tracking for buyers in Africa.
 
 ## Engineering Notes
 
 - [Three Checks Before an AI Release](https://alekwayne.dev/notes/testing-llm-releases.md) — A shipment-status fixture checks reply shape and status against the source record, then verifies the tool call.
-- [Testing the Edges of a Landed Cost](https://alekwayne.dev/notes/landed-cost-boundaries.md) — A confirmed zero-dollar fee and a missing fee lead to different decisions for a buyer. The calculator needs to preserve that difference.
+- [Edge Cases in Landed-Cost Pricing](https://alekwayne.dev/notes/landed-cost-boundaries.md) — A confirmed $0 import fee completes the estimate when other costs are known. A missing fee keeps it incomplete from input to display.
 
 ## Examples
 

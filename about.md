@@ -18,9 +18,9 @@ Built and administered 15+ client web builds and ran cross-browser regression QA
 
 ## Easy Car Imports
 
-Full-Stack Web Developer & Platform Creator · Sep 2021 – Jul 2023
+Founder & Full-Stack Developer · Sep 2021 – Jul 2023
 
-Built a sourcing platform for African buyers, synchronized 12 U.S. dealer feeds, and connected landed-cost estimates to customer orders and delivery milestones.
+Founded Easy Car Imports in Lagos and built its WordPress platform to sync 12 U.S. dealer feeds, estimate landed costs, and track orders through delivery.
 
 ## Education
 
