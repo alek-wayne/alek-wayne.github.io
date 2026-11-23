@@ -1,6 +1,6 @@
 # Alek Wayne
 
-> Full-stack engineer designing production web platforms, REST APIs, and AI workflows — from relational schema to CI/CD.
+> Full-stack engineer building production web platforms, REST APIs, and bounded AI workflows from schema to CI/CD.
 
 ## Profile
 
@@ -9,7 +9,7 @@
 
 ## Case Studies
 
-- [AFX Freight TMS](https://alekwayne.dev/work/afx-freight-tms.md) — A freight brokerage platform that turns a shipment request into a quote and gives operators a clear point to review incomplete cargo details.
+- [AFX Freight TMS](https://alekwayne.dev/work/afx-freight-tms.md) — A freight brokerage TMS that separates rate quoting from booking eligibility across React portals, an Express API, and PostgreSQL.
 - [LLM Regression Suite](https://alekwayne.dev/work/llm-regression-suite.md) — A Python harness that grades 48 synthetic policy cases, gates pull requests in GitHub Actions, and publishes replayable comparisons.
 - [Easy Car Imports](https://alekwayne.dev/work/easy-car-imports.md) — A WordPress platform that combined 12 U.S. dealer inventory feeds with landed-cost estimates, online orders, and shipment tracking for buyers in Africa.
 

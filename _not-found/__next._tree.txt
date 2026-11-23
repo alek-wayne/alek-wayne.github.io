@@ -2,4 +2,4 @@
 :HL["/fonts/geist-variable.woff2","font",{"crossOrigin":"anonymous","type":"font/woff2"}]
 2:[["children",{"s":"__PAGE__","h":160}]]
 1:[["children",{"s":"_not-found","h":96,"c":"$Q2"}]]
-0:{"b":"PPHfc6M8PRaEXkCigmCna","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
+0:{"b":"ihhfgo72ohlwKT6g5JnsU","t":{"t":{"s":"","h":80,"c":"$Q1"}}}

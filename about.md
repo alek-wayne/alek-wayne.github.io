@@ -1,6 +1,6 @@
 # Alek Wayne
 
-Full-stack engineer designing production web platforms, REST APIs, and AI workflows — from relational schema to CI/CD.
+Full-stack engineer building production web platforms, REST APIs, and bounded AI workflows from schema to CI/CD.
 
 Los Angeles / Orange County, CA. Open to full-time, contract, and part-time software engineering, AI testing, and IT support roles.
 
@@ -8,7 +8,7 @@ Los Angeles / Orange County, CA. Open to full-time, contract, and part-time soft
 
 Software Development Associate · Jan 2025 – Oct 2026
 
-Architected and deployed AFX (18 PostgreSQL tables, 35+ Express REST endpoints, React RBAC portals) alongside an Anthropic SDK brokerage agent with edge-case tests and automated Vercel/Railway CI/CD health checks.
+Built AFX’s React portals and Express API across 18 PostgreSQL tables and 35+ REST endpoints. Set up Vercel and Railway deployments and tested booking rules and an Anthropic SDK briefing with fixed inputs.
 
 ## Triumph Branding
 

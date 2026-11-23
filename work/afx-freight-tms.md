@@ -1,29 +1,43 @@
 # AFX Freight TMS
 
-A freight brokerage platform that turns a shipment request into a quote and gives operators a clear point to review incomplete cargo details.
+A freight brokerage TMS that separates rate quoting from booking eligibility across React portals, an Express API, and PostgreSQL.
 
 Role — Software Development Associate · Melton Truck Lines
 Period — Jan 2025 – Oct 2026
 Focus — React, Node.js, Express, PostgreSQL, Anthropic SDK
 
-## From Shipment Request to Booking
+## Quoting Before Cargo Review
 
-A shipper starts with an origin, a destination, equipment, and cargo details. The brokerage needs to price the shipment and decide whether it has enough information to proceed. Those two decisions can have different answers for the same request.
+Shippers sometimes submit a rate request before confirming cargo weight. I built separate rating and booking checks, so a request with enough inputs for a rate retains that result while the booking decision goes to review.
 
 ## The System I Built
 
-I built the React shipper and carrier portals and the Express API behind them. During my work at Melton, the system spanned 18 PostgreSQL tables and 35+ REST endpoints. I worked with engineering staff and leadership to turn brokerage requirements into technical specifications and acceptance tests.
+I built the React shipper and carrier portals and their Express API at Melton Truck Lines. The work spanned 18 PostgreSQL tables and 35+ REST endpoints. I worked with engineering staff and leadership to turn brokerage rules into acceptance tests.
 
-## Keeping Pricing and Eligibility Separate
+## Separating Rate Quotes from Booking Eligibility
 
-The server calculates the price and evaluates cargo eligibility separately. That gives a shipper a useful estimate even when an operator still needs to clarify part of the request. The interface can show a calculated amount and a request for more information at the same time.
+The server checks rate inputs and cargo requirements independently. If the rate is available and the cargo check calls for review, the interface displays the quote and the review status together.
 
-## A One-Input Replay
+## Authorizing Access in Express
 
-I replayed a fictional Tulsa-to-Dallas dry van request for 12 pallets of machine parts at 18,000 lb. With a fixed market input, the pricing engine returned $2,300 and marked the request eligible. Removing only the weight produced the same $2,300 quote and sent the booking decision to operator review.
+Shippers and carriers use different workspaces over a shared backend. Express checks the caller’s role and the scope of the requested record before returning load details, so access decisions stay on the server.
 
-## Checking an AI Briefing
+## Reading Shared Load Records
 
-Application code calculates recent activity before asking the model to summarize it. In an offline replay, the sample day had eight quote requests against a seven-day average of four. A valid simulated response produced a briefing. An empty response raised a warning and produced no briefing. Judging the quality of the writing would require real model outputs.
+PostgreSQL stores quote records, loads, and tracking events separately. The portals read load details through the same API, so each view draws shipment status from the shared records.
+
+## Computing Activity Before Summarizing
+
+Application code computes activity counts and seven-day averages before requesting a briefing through the Anthropic SDK. The offline replay used eight sample quote requests against an average of four. A valid reply produced a briefing. An empty reply raised a warning and produced no briefing.
+
+## Checking Deployments and Booking Rules
+
+I set up Git-based releases for the React frontend on Vercel and the Express API on Railway. Health checks verify the deployed service responds. Booking-policy tests separately verify how the code classifies incomplete cargo.
+
+## Verifying the Quote Boundary
+
+I replayed one fictional dry van load with a fixed market input and changed only the weight field. Both inputs returned a $2,300 rate. The 18,000 lb input cleared the cargo check, and the missing-weight input moved the booking decision to operator review.
+
+[Read Three Checks Before an AI Release](https://alekwayne.dev/notes/testing-llm-releases/)
 
 [Open the Interactive Example](https://alekwayne.dev/work/afx-freight-tms/#demo)
