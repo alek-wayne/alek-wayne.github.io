@@ -15,7 +15,7 @@
 
 ## Engineering Notes
 
-- [Three Checks Before an AI Release](https://alekwayne.dev/notes/testing-llm-releases.md) — A shipment-status fixture verifies the assistant’s reply, its supporting record, and the recorded tool action.
+- [Three Checks Before an AI Release](https://alekwayne.dev/notes/testing-llm-releases.md) — A shipment-status fixture checks reply shape and status against the source record, then verifies the tool call.
 - [Testing the Edges of a Landed Cost](https://alekwayne.dev/notes/landed-cost-boundaries.md) — A confirmed zero-dollar fee and a missing fee lead to different decisions for a buyer. The calculator needs to preserve that difference.
 
 ## Examples

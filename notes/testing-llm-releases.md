@@ -1,6 +1,6 @@
 # Three Checks Before an AI Release
 
-A shipment-status fixture verifies the assistant’s reply, its supporting record, and the recorded tool action.
+A shipment-status fixture checks reply shape and status against the source record, then verifies the tool call.
 
 ## Start with One Answer You Can Check
 

@@ -31,7 +31,7 @@ The fixture gate fails on any drop in suite accuracy, candidate accuracy below 9
 
 ## Reading the Release Evidence
 
-CI replays the JSON comparison and verifies the Markdown report before uploading both. On the same 48 cases across 12 policy families, the repaired candidate passes 48/48 and the seeded candidate fails the gate at 40/48. Both runs use synthetic replies, timing, and token counts. Live accuracy, latency, and cost require separate measurement.
+CI replays each case from the saved JSON and verifies the Markdown report before uploading both. On the same 48 cases across 12 policy families, the repaired candidate passes 48/48 and the seeded candidate fails the gate at 40/48. Both runs use synthetic replies, timing, and token counts. Live accuracy, latency, and cost require separate measurement.
 
 [Read the Release Reports](https://github.com/alek-wayne/llm-regression-suite/releases/tag/v1.0.1)
 
